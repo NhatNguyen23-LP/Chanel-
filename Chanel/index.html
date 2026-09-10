@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANEL - Official Website</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='Montserrat, sans-serif' font-weight='bold' fill='black'>C</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Luxury Typography: Playfair Display (Editorial/Headings) + Montserrat (UI/Nav) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chanel: {
+                            black: '#000000',
+                            white: '#ffffff',
+                            light: '#f9f9f9',
+                            darkgray: '#1d1d1d',
+                            midgray: '#767676',
+                            border: '#e5e5e5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    letterSpacing: {
+                        'chanel-wide': '0.1em',
+                        'chanel-wider': '0.15em',
+                        'chanel-widest': '0.25em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1d1d1d;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .fade-transition {
+            transition: opacity 0.6s ease-in-out;
+        }
+        
+        /* Custom Minimalist Scrollbar */
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
+        ::-webkit-scrollbar-thumb { background: #e5e5e5; }
+        ::-webkit-scrollbar-thumb:hover { background: #000000; }
+    </style>
+</head>
+<body class="selection:bg-black selection:text-white pt-16">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-chanel-border transition-all duration-300">
+        <div class="max-w-screen-2xl mx-auto px-6 h-16 flex justify-between items-center">
+            <!-- Left: Mobile Menu & Nav -->
+            <div class="w-1/3 flex items-center">
+                <button class="lg:hidden text-black hover:text-chanel-midgray transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 8h16M4 16h16"/></svg>
+                </button>
+                <nav class="hidden lg:flex space-x-8 text-[11px] font-medium tracking-chanel-wider text-black uppercase">
+                    <a href="#featured" class="hover:text-chanel-midgray transition-colors">Cận cảnh độc bản</a>
+                    <a href="#collection" class="hover:text-chanel-midgray transition-colors">Bộ sưu tập mới</a>
+                </nav>
+            </div>
+            
+            <!-- Center: Logo -->
+            <div class="w-1/3 flex justify-center">
+                <a href="#" class="text-2xl md:text-3xl font-bold tracking-[0.25em] text-black uppercase ml-3">CHANEL</a>
+            </div>
+            
+            <!-- Right: Utility Icons -->
+            <div class="w-1/3 flex justify-end items-center space-x-6">
+                <a href="#concierge" class="hidden sm:inline-block text-[11px] tracking-chanel-wider font-medium text-black uppercase hover:text-chanel-midgray transition-all">
+                    Liên hệ
+                </a>
+                <button class="text-black hover:text-chanel-midgray transition">
+                    <svg class="w-5 h-5 hidden lg:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Interactive Showcase -->
+    <section id="featured" class="py-20 md:py-32 bg-white">
+        <div class="max-w-screen-xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 md:mb-24" data-aos="fade-up">
+                <h2 class="text-xl md:text-2xl font-light tracking-chanel-widest text-black mb-6 uppercase">Tuyệt Tác Thủ Công</h2>
+                <div class="w-12 h-[1px] bg-black mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                <!-- Image Display -->
+                <div class="lg:col-span-7 order-1 bg-chanel-light overflow-hidden relative aspect-square md:aspect-[4/3] flex items-center justify-center group" data-aos="fade-right">
+                    <img id="bagPreview" 
+                         src="Túi xách CHANEL 25 cỡ Mini.jpg" 
+                         alt="Chanel Close Up" 
+                         class="w-full h-full object-cover scale-[1.15] mix-blend-multiply drop-shadow-xl fade-transition group-hover:scale-[1.2] duration-1000">
+                </div>
+
+                <!-- Text Detail -->
+                <div class="lg:col-span-5 order-2 lg:pr-10" data-aos="fade-left">
+                    <p class="text-[10px] font-medium tracking-chanel-widest text-chanel-midgray mb-4 uppercase" id="leatherType">Da Bê Bóng (Shiny Calfskin)</p>
+                    
+                    <!-- Sử dụng font Serif (Playfair Display) cho tiêu đề để tạo vẻ đẹp cổ điển -->
+                    <h3 class="font-serif text-3xl md:text-4xl text-black mb-6 font-medium leading-snug tracking-wide" id="bagTitle">Túi Xách Mini Hồng Pastel</h3>
+                    
+                    <p class="text-[13px] leading-loose text-chanel-midgray mb-12 font-light" id="bagDescription">
+                        Lớp da bóng mượt bắt sáng hoàn hảo ở mọi góc độ. Thiết kế miệng túi dây rút tinh tế tôn vinh trọn vẹn dải xích kim loại mạ vàng đan xen da, toát lên sự ngọt ngào và kiêu kỳ vô giá.
+                    </p>
+
+                    <div class="space-y-4">
+                        <label class="text-[10px] tracking-chanel-widest text-black block font-semibold uppercase">Lựa chọn thiết kế</label>
+                        <div class="flex items-center gap-3 flex-wrap">
+                            <button onclick="changeFocus(event, 'pinkmini')" class="focus-btn w-14 h-14 border border-black bg-center bg-no-repeat transition-all bg-chanel-light" style="background-image: url('Túi xách CHANEL 25 cỡ Mini.jpg'); background-size: cover;"></button>
+                            
+                            <button onclick="changeFocus(event, 'classic')" class="focus-btn w-14 h-14 border border-transparent hover:border-chanel-border bg-center bg-no-repeat transition-all bg-chanel-light" style="background-image: url('Túi xách Classic 11.12.jpg'); background-size: cover;"></button>
+                            
+                            <button onclick="changeFocus(event, 'furmini')" class="focus-btn w-14 h-14 border border-transparent hover:border-chanel-border bg-center bg-no-repeat transition-all bg-chanel-light" style="background-image: url('Túi nắp gập cỡ mini.jpg'); background-size: cover;"></button>
+                            
+                            <button onclick="changeFocus(event, 'blackmini')" class="focus-btn w-14 h-14 border border-transparent hover:border-chanel-border bg-center bg-no-repeat transition-all bg-chanel-light" style="background-image: url('Túi nắp gập cỡ nhỏ.jpg'); background-size: cover;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Collection Grid -->
+    <section id="collection" class="py-20 md:py-28 bg-white border-t border-chanel-border">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-xl md:text-2xl font-light tracking-chanel-widest text-black mb-6 uppercase">Bộ Sưu Tập Hoàn Chỉnh</h2>
+                <div class="w-12 h-[1px] bg-black mx-auto"></div>
+            </div>
+
+            <!-- Thiết kế 4 cột chuyên nghiệp -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
+                
+                <!-- 1. Classic 11.12 -->
+                <div class="group cursor-pointer flex flex-col items-center text-center" data-aos="fade-up">
+                    <div class="bg-chanel-light w-full aspect-[4/5] mb-6 overflow-hidden flex items-center justify-center relative">
+                        <img src="Túi xách Classic 11.12.jpg" alt="Classic 11.12" class="w-full h-full object-cover scale-[1.1] mix-blend-multiply drop-shadow-md group-hover:scale-[1.2] transition-transform duration-1000">
+                    </div>
+                    <p class="text-[9px] font-medium tracking-chanel-widest text-chanel-midgray mb-3 uppercase">Métiers d'Art</p>
+                    <h4 class="font-serif text-[18px] text-black mb-2">Túi Classic 11.12 Đính Kết</h4>
+                </div>
+
+                <!-- 2. Túi nắp gập cỡ mini -->
+                <div class="group cursor-pointer flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-chanel-light w-full aspect-[4/5] mb-6 overflow-hidden flex items-center justify-center relative">
+                        <img src="Túi nắp gập cỡ mini.jpg" alt="Mini Flap" class="w-full h-full object-cover scale-[1.1] mix-blend-multiply drop-shadow-md group-hover:scale-[1.2] transition-transform duration-1000">
+                    </div>
+                    <p class="text-[9px] font-medium tracking-chanel-widest text-chanel-midgray mb-3 uppercase">Thiết Kế Đặc Biệt</p>
+                    <h4 class="font-serif text-[18px] text-black mb-2">Túi Nắp Gập Mini Lông Thú</h4>
+                </div>
+
+                <!-- 3. Túi nắp gập cỡ maxi -->
+                <div class="group cursor-pointer flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-chanel-light w-full aspect-[4/5] mb-6 overflow-hidden flex items-center justify-center relative">
+                        <img src="Túi nắp gập cỡ maxi.jpg" alt="Maxi Flap" class="w-full h-full object-cover scale-[1.1] mix-blend-multiply drop-shadow-md group-hover:scale-[1.2] transition-transform duration-1000">
+                    </div>
+                    <p class="text-[9px] font-medium tracking-chanel-widest text-chanel-midgray mb-3 uppercase">Thu Đông</p>
+                    <h4 class="font-serif text-[18px] text-black mb-2">Túi Nắp Gập Cỡ Maxi</h4>
+                </div>
+
+                <!-- 4. Túi nắp gập cỡ nhỏ (3) -->
+                <div class="group cursor-pointer flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-chanel-light w-full aspect-[4/5] mb-6 overflow-hidden flex items-center justify-center relative">
+                        <img src="Túi nắp gập cỡ nhỏ (3).jpg" alt="Silver Small Flap" class="w-full h-full object-cover scale-[1.1] mix-blend-multiply drop-shadow-md group-hover:scale-[1.2] transition-transform duration-1000">
+                    </div>
+                    <p class="text-[9px] font-medium tracking-chanel-widest text-chanel-midgray mb-3 uppercase">Dạ Tiệc</p>
+                    <h4 class="font-serif text-[18px] text-black mb-2">Túi Nắp Gập Ánh Bạc</h4>
+                </div>
+
+                <!-- 5. Túi shopping cỡ nhỏ (2) -->
+                <div class="group cursor-pointer flex flex-col items-center text-center" data-aos="fade-up">
+                    <div class="bg-chanel-light w-full aspect-[4/5] mb-6 overflow-hidden flex items-center justify-center relative">
+                        <img src="Túi shopping cỡ nhỏ (2).jpg" alt="Small Shopping" class="w-full h-full object-cover scale-[1.1] mix-blend-multiply drop-shadow-md group-hover:scale-[1.2] transition-transform duration-1000">
+                    </div>
+                    <p class="text-[9px] font-medium tracking-chanel-widest text-chanel-midgray mb-3 uppercase">Tweed Kẻ Sọc</p>
+                    <h4 class="font-serif text-[18px] text-black mb-2">Túi Shopping Nhỏ Nắp Gập</h4>
+                </div>
+
+                <!-- 6. TÚI SHOPPING (Xanh dương) -->
+                <div class="group cursor-pointer flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-chanel-light w-full aspect-[4/5] mb-6 overflow-hidden flex items-center justify-center relative">
+                        <img src="TÚI SHOPPING.jpg" alt="Large Shopping Blue" class="w-full h-full object-cover scale-[1.1] mix-blend-multiply drop-shadow-md group-hover:scale-[1.2] transition-transform duration-1000">
+                    </div>
+                    <p class="text-[9px] font-medium tracking-chanel-widest text-chanel-midgray mb-3 uppercase">Da Lộn Cao Cấp</p>
+                    <h4 class="font-serif text-[18px] text-black mb-2">Túi Shopping Xanh Đại Dương</h4>
+                </div>
+
+                <!-- 7. Túi shopping cỡ nhỏ (3) (Họa tiết) -->
+                <div class="group cursor-pointer flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-chanel-light w-full aspect-[4/5] mb-6 overflow-hidden flex items-center justify-center relative">
+                        <img src="Túi shopping cỡ nhỏ (3).jpg" alt="Printed Shopping" class="w-full h-full object-cover scale-[1.1] mix-blend-multiply drop-shadow-md group-hover:scale-[1.2] transition-transform duration-1000">
+                    </div>
+                    <p class="text-[9px] font-medium tracking-chanel-widest text-chanel-midgray mb-3 uppercase">Họa Tiết Đương Đại</p>
+                    <h4 class="font-serif text-[18px] text-black mb-2">Túi Shopping Phom Tam Giác</h4>
+                </div>
+
+                <!-- 8. Túi nắp gập cỡ nhỏ (4) (Leopard) -->
+                <div class="group cursor-pointer flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-chanel-light w-full aspect-[4/5] mb-6 overflow-hidden flex items-center justify-center relative">
+                        <img src="Túi nắp gập cỡ nhỏ (4).jpg" alt="Leopard Flap" class="w-full h-full object-cover scale-[1.1] mix-blend-multiply drop-shadow-md group-hover:scale-[1.2] transition-transform duration-1000">
+                    </div>
+                    <p class="text-[9px] font-medium tracking-chanel-widest text-chanel-midgray mb-3 uppercase">Bản Phối Đặc Biệt</p>
+                    <h4 class="font-serif text-[18px] text-black mb-2">Túi Nắp Gập Họa Tiết Báo</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-24">
+        <div class="max-w-screen-2xl mx-auto px-6 flex flex-col items-center">
+            <span class="text-3xl font-bold tracking-[0.25em] mb-12">CHANEL</span>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-[11px] font-medium tracking-chanel-wider text-gray-400 mb-16 uppercase">
+                <a href="#" class="hover:text-white transition-colors">Tìm Cửa Hàng</a>
+                <a href="#" class="hover:text-white transition-colors">Liên Hệ</a>
+                <a href="#" class="hover:text-white transition-colors">Điều Khoản</a>
+                <a href="#" class="hover:text-white transition-colors">Bảo Mật</a>
+            </div>
+            <p class="text-[10px] text-gray-500 uppercase tracking-[0.2em] text-center">
+                © 2026 CHANEL. MỌI QUYỀN ĐƯỢC BẢO LƯU.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        const focusData = {
+            pinkmini: {
+                title: "Túi Xách Mini Hồng Pastel",
+                type: "Da Bê Bóng (Shiny Calfskin)",
+                desc: "Lớp da bóng mượt bắt sáng hoàn hảo ở mọi góc độ. Thiết kế miệng túi dây rút tinh tế tôn vinh trọn vẹn dải xích kim loại mạ vàng đan xen da, toát lên sự ngọt ngào và kiêu kỳ vô giá.",
+                img: "Túi xách CHANEL 25 cỡ Mini.jpg"
+            },
+            classic: {
+                title: "Túi Classic 11.12 Đính Kết",
+                type: "Nghệ Thuật Thủ Công Đỉnh Cao",
+                desc: "Từng đường kim mũi chỉ thêu hoa văn tinh xảo phủ kín bề mặt túi. Quan sát cận cảnh để thấy nghệ thuật đính cườm, pha lê của các xưởng thủ công Pháp tôn lên ổ khóa CC biểu tượng rực rỡ.",
+                img: "Túi xách Classic 11.12.jpg"
+            },
+            furmini: {
+                title: "Túi Nắp Gập Mini Lông Thú",
+                type: "Thiết Kế Phá Cách",
+                desc: "Bề mặt da bê đệm trám căng phồng đi liền với chi tiết kim loại điêu khắc động vật dũng mãnh ở hai góc. Đuôi lông thú mượt mà tạo hiệu ứng thị giác sang trọng và đầy bí ẩn.",
+                img: "Túi nắp gập cỡ mini.jpg"
+            },
+            blackmini: {
+                title: "Túi Nắp Gập Đen Tuyền",
+                type: "Dạ Tiệc Huyền Bí",
+                desc: "Sự quyến rũ vượt thời gian trong sắc đen bí ẩn, điểm xuyết bề mặt tinh xảo tôn vinh nét đẹp mạnh mẽ và thanh lịch của những quý cô hiện đại.",
+                img: "Túi nắp gập cỡ nhỏ.jpg"
+            }
+        };
+
+        function changeFocus(e, key) {
+            const preview = document.getElementById('bagPreview');
+            const data = focusData[key];
+            
+            const allBtns = document.querySelectorAll('.focus-btn');
+            allBtns.forEach(btn => {
+                btn.classList.remove('border-black');
+                btn.classList.add('border-transparent');
+            });
+
+            const currentBtn = e.currentTarget;
+            currentBtn.classList.remove('border-transparent');
+            currentBtn.classList.add('border-black');
+
+            preview.style.opacity = '0';
+            
+            setTimeout(() => {
+                preview.src = data.img;
+                document.getElementById('bagTitle').innerText = data.title;
+                document.getElementById('leatherType').innerText = data.type;
+                document.getElementById('bagDescription').innerText = data.desc;
+                
+                preview.style.opacity = '1';
+            }, 400);
+        }
+    </script>
+</body>
+</html>
