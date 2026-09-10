@@ -69,11 +69,12 @@
             transform: translateY(-100%);
         }
 
-        /* Custom Cursor */
+        /* Custom Cursor Đảo Màu (Mix-blend-mode) */
         .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #000;
+            width: 12px;
+            height: 12px;
+            background-color: #ffffff; /* Trắng để tạo hiệu ứng bù trừ */
+            mix-blend-mode: difference; /* Phép thuật đảo màu ở đây */
             border-radius: 50%;
             position: fixed;
             top: 0;
@@ -81,14 +82,12 @@
             pointer-events: none;
             z-index: 9999;
             transform: translate(-50%, -50%);
-            transition: width 0.3s, height 0.3s, background-color 0.3s;
+            transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         }
         .cursor-hover {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0,0,0,0.1);
-            backdrop-filter: blur(2px);
-            border: 1px solid #000;
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
         }
 
         /* Marquee Animation */
@@ -213,8 +212,8 @@
                 
                 <!-- 1 -->
                 <div class="group cursor-none hoverable" data-aos="fade-up" data-aos-delay="100">
-                    <div class="img-reveal-wrapper w-full aspect-[3/4] bg-white mb-6 overflow-hidden">
-                        <img src="Tui nap gap co max.jpg" class="w-full h-full object-cover mix-blend-multiply scale-105 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                    <div class="img-reveal-wrapper w-full aspect-[3/4] bg-white mb-6 overflow-hidden flex items-center justify-center">
+                        <img src="Tui nap gap co max.jpg" class="w-full h-full object-contain p-4 mix-blend-multiply scale-105 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
                     </div>
                     <div class="flex justify-between items-end">
                         <div>
@@ -225,10 +224,10 @@
                     </div>
                 </div>
 
-                <!-- 2. Túi shopping nhỏ (sửa scale 1.3) -->
+                <!-- 2. Túi shopping nhỏ (Dùng object-contain tránh bị cắt hình) -->
                 <div class="group cursor-none hoverable lg:mt-32" data-aos="fade-up" data-aos-delay="200">
-                   <div class="img-reveal-wrapper w-full aspect-[3/4] bg-white mb-6 overflow-hidden flex items-center justify-center">
-                        <img src="bag-5.jpg" alt="Small Shopping" class="w-full h-full object-cover mix-blend-multiply scale-[1.5] translate-y-[15%] group-hover:scale-[1.6] transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                    <div class="img-reveal-wrapper w-full aspect-[3/4] bg-white mb-6 overflow-hidden flex items-center justify-center">
+                        <img src="bag-5.jpg" class="w-full h-full object-contain p-4 mix-blend-multiply scale-[1.3] group-hover:scale-[1.4] transition-transform duration-1000 grayscale group-hover:grayscale-0">
                     </div>
                     <div class="flex justify-between items-end">
                         <div>
@@ -241,8 +240,8 @@
 
                 <!-- 3 -->
                 <div class="group cursor-none hoverable" data-aos="fade-up" data-aos-delay="300">
-                    <div class="img-reveal-wrapper w-full aspect-[3/4] bg-white mb-6 overflow-hidden">
-                        <img src="tui shopping.jpg" class="w-full h-full object-cover mix-blend-multiply scale-105 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                    <div class="img-reveal-wrapper w-full aspect-[3/4] bg-white mb-6 overflow-hidden flex items-center justify-center">
+                        <img src="tui shopping.jpg" class="w-full h-full object-contain p-4 mix-blend-multiply scale-105 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
                     </div>
                     <div class="flex justify-between items-end">
                         <div>
@@ -255,8 +254,8 @@
 
                 <!-- 4 -->
                 <div class="group cursor-none hoverable lg:col-span-2" data-aos="fade-up">
-                    <div class="img-reveal-wrapper w-full aspect-[16/9] bg-white mb-6 overflow-hidden">
-                        <img src="Tui shopping co nho (3).jpg" class="w-full h-full object-cover mix-blend-multiply scale-105 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                    <div class="img-reveal-wrapper w-full aspect-[16/9] bg-white mb-6 overflow-hidden flex items-center justify-center">
+                        <img src="Tui shopping co nho (3).jpg" class="w-full h-full object-contain p-4 mix-blend-multiply scale-105 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
                     </div>
                     <div>
                         <p class="text-[9px] tracking-chanel-widest text-gray-400 mb-2 uppercase">Đương Đại</p>
@@ -266,8 +265,8 @@
 
                 <!-- 5 -->
                 <div class="group cursor-none hoverable lg:mt-16" data-aos="fade-up">
-                    <div class="img-reveal-wrapper w-full aspect-[3/4] bg-white mb-6 overflow-hidden">
-                        <img src="Tui nap gap co nho (4).jpg" class="w-full h-full object-cover mix-blend-multiply scale-105 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                    <div class="img-reveal-wrapper w-full aspect-[3/4] bg-white mb-6 overflow-hidden flex items-center justify-center">
+                        <img src="Tui nap gap co nho (4).jpg" class="w-full h-full object-contain p-4 mix-blend-multiply scale-105 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
                     </div>
                     <div>
                         <p class="text-[9px] tracking-chanel-widest text-gray-400 mb-2 uppercase">Bản phối đặc biệt</p>
